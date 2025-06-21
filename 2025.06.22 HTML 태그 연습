@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>2025.06.22 HTML 태그 연습</title>
+</head>
+<body>
+	<br>	
+<h1>2025.06.22 HTML 태그 연습</h1>
+<br>
+<ul>
+첫날 배운 텍스트 관련 html 태그들을 정리하고, 직접 써보는 연습을 했다.
+<br><br>
+<li><b>굵은 글씨</b>는 <strong>strong</strong> 혹은 <b>b</b>로 표현할 수 있다.</li>
+아무래도 한글자인 <b>b</b>가 편한 것 같다.
+<br><br>
+<li><i>기울임</i>은 <em>em</em> 혹은 <i>i</i>를 쓴다.</li>
+	강조나 인용구에서 많이 쓸 것 같다.
+<br><br>
+<blockquote>"웹은 연결이다."
+<h5>- 팀 비너스리</h5>
+</blockquote>
+위와 같이 인용은 blockquote로 쓸 수 있고,
+<q>q</q></q>로도 가능하다.
+<br><br>
+<li><mark>mark</mark>를 통해서 <mark>형관펜</mark>처럼 나타낼 수도 있다.</li>
+<br>
+<li><u>밑줄</u>을 긋고 싶을 땐, <u>u</u>를 사용하면 된다.</li>
+<br>
+<li><sup>윗 첨자</sup>는 <sup>sup</sup>을 사용,
+<sub>아래 첨자</sub>는 <sub>sub</sub>을 사용하면 된다.</li>
+<br>
+<li><s>취소선</s>은 <s>s</s>로 표기할 수 있다.</li>
+<br>
+<li><u>u</u>로 <u>가로선</u>도 생성할 수 있다.</li>
+</ul>
+<br><br>
+<h3>리스트 정리</h3>
+<li>strong / b : 굵게</li>
+<li>em / i : 기울기</li>
+<li>blockquote / q : 인용</li>
+<li>mark : 형광펜</li>
+<li>u : 밑줄</li>
+<li>sup : 윗 첨자</li>
+<li>sub : 아래 첨자</li>
+<li>s : 취소선</li>
+<li>u : 가로선</li>
+
+<ol> type="1"
+	<li>순서 없는 목록은 ul</li>
+	<li>순서 있는 목록은 ol (type=순서 형식 / start=시작 번호)</li>
+	<li>들여쓰기는 dl (dt,dd로 정도 조절)</li></ol>
+	<br>
+	브라우저에서 어떻게 보이는지 비교해보면서 연습하니까 훨씬 기억에 잘 남는다.
+	<br>
+	앞으로 파이팅!
+</body>
+</html>
