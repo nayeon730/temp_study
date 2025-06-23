@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 문제 2번</title>
+</head>
+<body>
+    <form action="#">
+        <label for="">고객명 : </label><input type="text"><br><br>
+        <label for="">전화번호 : </label><input type="text"><br><br>
+        <label for="">E-mail : </label><input type="text"><br><br>
+    </form>
+
+    <form action="#">
+        <label for="">피자선택 : </label>
+            <select name="pizza">
+                <option value="ch">치즈 피자</option>
+                <option value="co">콤비네이션 피자</option>
+                <option value="ba">베이컨 포테이토 피자</option>
+            </select>
+            <fieldset>
+                <legend>피자 사이즈</legend>
+                <input type="radio" value="S" name="size">
+                <label for="">Small</label><br><br>
+                <input type="radio" value="M" name="size">
+                <label for="">Medium</label><br><br>
+                <input type="radio" value="L" name="size">
+                <label for="">Large</label><br><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>토핑 선택</legend>
+                <input type="checkbox" id="bacon" value="베이컨">
+                <label for="bacon">베이컨</label><br><br>
+                <input type="checkbox" id="cheese" value="치즈">
+                <label for="cheese">치즈</label><br><br>
+                <input type="checkbox" id="onion" value="양파">
+                <label for="onion">양파</label><br><br>
+                <input type="checkbox" id="mushroom" value="버섯">
+                <label for="mushroom">버섯</label><br><br>
+            </fieldset>
+    </form>
+    <br>
+    <form action="#">
+        <label for="">희망배송시간</label><input type="time">
+    </form>
+    <br>
+    <form action="#">
+        <label for="">배송시 요청사항 : </label><textarea style="resize;" cols="15" rows="2"></textarea>
+    <br><br>
+    <input type="submit" value="주문하기">
+</form>
+    
+
+ 
+
+
+
+
+</body>
+</html>
