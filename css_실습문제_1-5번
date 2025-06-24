@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>css_실습문제_1번</title>
+    <style>
+        div {
+            width: 278px;
+            height: 160px;
+            background: #FFB9B9;
+        }
+        
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+
+---------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2번</title>
+    <style>
+        div {
+            background: #FFB9B9;
+            width: 160px;
+            height: 278px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+
+---------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <style>
+        .circle {
+            width: 160px;
+            height: 160px;
+            background: #FFB9B9;
+            border-radius: 50%
+        }
+
+        </style>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>
+
+---------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <style>
+        div {
+            background: #CA785C;
+            width: 278px;
+            height: 160px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+
+---------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+    <style>
+        div {
+            background: #CA785C;
+            width: 160px;
+            height: 278px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
