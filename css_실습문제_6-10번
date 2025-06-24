@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+    <style>
+    .circle {
+        width: 160px;
+        height: 160px;
+        background: #CA785C;
+        border-radius: 50%;
+    } 
+
+    .pro {
+        margin-left: 55px;
+    }
+
+    </style>
+</head>
+<body>
+   <div class="circle"></div>
+   <br>
+   <div class="pro">프로필</div>
+</body>
+</html>
+
+----------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+    <style>
+         #card {
+            position: relative;
+            width: 278px;
+            height: 160px;
+            background: #CA785C;
+            border-radius: 10%;
+        }
+
+        #img {
+            width:100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        #text {
+            color: white;
+            font-size: 16px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            padding: 0px 17px;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <img src="sample/image/7.png" alt="background" id="img">
+        <div id="text">안녕하세요!</div>
+    </div>
+</body>
+</html>
+
+----------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+    <style>
+        #card {
+            position: relative;
+            width: 160px;
+            height: 240px;
+            background: #CA785C;
+            border-radius: 5%;
+        }
+
+        #img {
+            width: 160px;
+            height: 172px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+        }
+
+        #text1 {
+            color: white;
+            font-size: 16px;
+            padding-left: 10px;
+        }
+
+        #tx {
+            color: white;
+            font-size: 14px;
+            padding-left: 10px;
+            padding-top: 13px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        #text3 {
+            padding-right: 7%;
+        }
+       
+        
+    </style>
+</head>
+<body>
+ <div id="card">
+    <img src="sample/image/8.png" alt="background" id="img">
+    <div id="text1">인테리어란?</div>
+    <div id="tx">
+        <span id="text2">김작가</span>
+        <span id="text3">2024.01.01</span>
+    </div>    
+</body>
+</html>
+
+----------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=l, initial-scale=1.0">
+    <title>9</title>
+    <style>
+    
+        #text {
+            font-size: 24px;
+            font-weight: bolder;
+            color:white;
+        }
+
+        #box { width: 278px;
+            height: 80px;
+            background: #CA785C;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <span id="text">한여름</span>
+    </div>
+</html>
+
+----------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+    <style>
+        #box {
+            width: 320px;
+            height: 80px;
+            background: #CA785C;
+            display: flex;
+            align-items: center;
+        }
+
+        #tt {
+            margin-left: 10%;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            gap: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="tt">
+        <span id="t1">봄</span>
+        <span id="t2">여름</span>
+        <span id="t3">가을</span>
+        <span id="t4">겨울</span>
+        </div>
+    </div>
+</body>
+</html>
+
+----------------------------------------------
+
+
+
+----------------------------------------------
