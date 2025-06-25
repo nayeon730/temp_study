@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11</title>
+    <style>
+        .card {
+            background-image: url("/sample/image/11.png");
+            background-repeat: no-repeat;
+            width: 70%;
+            height: 1600px;
+        }
+
+        .text {
+            font-weight: bold;
+            color: white;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="text">인테리어 디자인</div>
+    </div>
+    
+
+    
+</body>
+</html>
+
+----------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .card {
+            background-image: url("/sample/image/11.png");
+            background-repeat: no-repeat;
+            width: 70%;
+            height: 1600px;
+            position:  relative; /* 기준점 설정 */
+        }
+
+        .text {
+            font-weight: bold;
+            color: white;
+        }
+    
+        .circle1 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: aqua;
+            position: absolute; /* 이게 있어야 top,left 설정 가능*/
+            top: 270px;
+            left: 10px;
+        }
+
+        .circle2 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: pink;
+            position: absolute; /* 이게 있어야 top,left 설정 가능*/
+            top: 270px;
+            left: 200px;
+        }
+
+        .circle3 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* 이게 있어야 top,left 설정 가능*/
+            background-color: yellow; 
+            position: absolute;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="text">인테리어 디자인</div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+    </div>
+</body>
+</html>
+
+----------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13</title>
+    <style>
+        .pink-box {
+            background: #FFB9B9;
+            width: 250px;
+            height: 150px;
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+        }
+
+        .main {
+            position: relative;
+        }
+        
+        .white-box {
+            border-width: 3pt;
+            border: 2px solid #FFB9B9;
+            width: 246px;
+            height: 80px;
+        }
+
+        .text {
+            font-size: 14px;
+            position: absolute;
+            left: 10px;
+            top: 155px;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            background: gainsboro;
+            border-radius: 50%;
+            position: absolute;
+            left: 10px;
+            top: 185px;
+        }
+
+        .name {
+            font-size: 14px;
+            position: absolute;
+            left: 45px;
+            top: 190px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div class="pink-box"></div>
+        <div class="white-box">
+            <div class="text">안녕하세요. 텍스트입니다.</div>
+            <div class="circle"></div>
+            <div class="name">휴양죠</div>
+        </div>
+    </main>
+</body>
+</html>
+
+----------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <style>
+        header {
+            background-color: blue;
+            width: 100%;
+            height: 10%;
+        }
+        
+        nav {
+            background-color: red;
+            width: 10%;
+            height: 200px;
+            
+        }
+
+        main {
+            display: flex;
+        }
+
+        .section-text {
+            align-self: flex-start;
+
+        }
+        section {
+            background-color: green;
+            width: 70%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .article1 {
+            background-color: greenyellow;
+            width: 160px;
+            height: 50px;
+        }
+/*section {
+    background-color: green;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;      }*/
+        .article2 {
+            background-color: pink;
+            width: 160px;
+            height: 50px;
+        }
+
+        .article3 {
+            background-color: cyan;
+            width: 160px;
+            height: 50px;
+        }
+
+        aside {
+            background-color: antiquewhite;
+            width: 20%;
+        }
+
+        footer {
+            background-color: blueviolet;
+            width: 100%;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>
+        <nav>nav</nav>
+        <section>
+            <article class="section-text">section</article>
+            <article class="article1">article</article>
+            <article class="article2">article</article>
+            <article class="article3">article</article>
+        </section>
+        <aside>aside</aside>
+   </main>
+   <footer>footer</footer>
+</body>
+</html>
+
+----------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <style>
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+         header {
+            width: 100%;
+            height: 9%;
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: fl;
+         }
+
+         nav {
+            background-color: red;
+            width: 70%;
+            align-self: center;
+            
+         }   
+
+    /*section {
+    background-color: green;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;      }*/
+
+         main {
+            display: flex; /* aside를 끼워넣음 */
+         }
+
+         section {
+            background-color: green;
+            width: 85%;
+            height: 9em;
+            display: flex; /* 가로 정렬 */
+            flex-direction: column; /* article이 세로 정렬 */
+            justify-content: center; /* article이 상하 가운데 정렬 */
+            align-items: center; /* article이 좌우 가운데 정렬 */
+         }
+           
+         .section-text {
+            align-self: flex-start; /*텍스트를 좌측정렬*/
+         }
+
+         .article1 {
+            background-color: yellowgreen;
+            width: 60%;
+            height: 2.5em;
+         }
+
+         .article2 {
+            background-color: pink;
+            width: 60%;
+            height: 2.5em;
+         }
+
+         .article3 {
+            background-color: cyan;
+            width: 60%;
+            height: 2.5em;
+         }
+
+         aside {
+            background-color: antiquewhite;
+            width: 15%;
+         }
+
+         footer {
+            background-color: blueviolet;
+            height: 5%;
+         }
+
+
+         
+    </style>
+</head>
+<body>
+    <header>header
+        <nav>nav</nav>
+    </header>
+    
+    <main>
+        <section>
+            <article class="section-text">section</article>
+            <article class="article1">article</article>
+            <article class="article2">article</article>
+            <article class="article3">article</article>
+        </section>
+
+        <aside>aside</aside>
+    </main>
+
+    <footer>footer</footer>
+</body>
+</html>
