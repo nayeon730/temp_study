@@ -1,0 +1,172 @@
+01_conver-to-string
+
+/* 04_명시적 타입 변환
+개발자의 의도에 따라 값의 타입을 변환하는 것이다.
+자바스크립트에서 기본 제공하는 표준 빌트인 생성자 함수(String, NAumber, Boolean)를 new 연산자 없이 호출 가능하다.
+빌트인 메소드를 사용하는 방법으로 명시적 타입 변환이 가능하다. 
+*/
+
+// 1. String() 생성자 함수를 new 연산자 없이 호출
+console.log(String(10));    //"10"
+console.log(String(NaN));   //"Nan"
+console.log(String(Infinity));  //"Infinity"
+console.log(String(true));      //"true"
+console.log(String(false));     //"false"
+
+// 2. Object.prototype.tostring 메소드 사용
+console.log((10).toString());   //"10"
+console.log((NaN).toString());  //"NaN"
+console.log((Infinity).toString());  //"Infinity"
+console.log((true).toString());  //"true"
+console.log((false).toString());  //"false"
+
+// 3. 문자열 연결 연산자 이용
+
+------------------------------------------------------------------------------
+
+02_convert-to-number
+
+/* 02_숫자 타입으로 변환 */
+
+// Number 생성자 함수를 new 연산자 없이 호출
+
+console.log(Number('10')); // 10
+console.log(Number('10.01')); // 10.01
+console.log(Number(true)); // 1
+console.log(Number(false)); // 0
+
+// 2. parseInt, parsFloat 함수 이용
+console.log(parseInt('10'));
+console.log(parseFloat('10'));
+console.log(parseInt('10.01')); // 10
+console.log(parseFloat('10.01')); // 10.01
+
+// 3. + 단항 산술 연산자 이용
+
+// 4. * 산술 연산자 이용
+console.log('10' * 1); // 10
+console.log(typeof('10' * 1)); // number
+console.log('10.01' * 1);   // 10.01
+console.log(typeof('10.01' * 1));   // number
+console.log(true * 1);  // 1
+console.log(false * 1); // 0
+
+------------------------------------------------------------------------------
+
+03_conver-to-boolean
+
+/* 03_불리언(논리)타입으로 변환 */
+
+// 1. Boolean 생성자 함수
+
+console.log(Boolean('javasctipt')); // true
+console.log(Boolean('')); 
+console.log(Boolean('1'));
+console.log(Boolean('0')); 
+console.log(Boolean(NaN)); 
+console.log(Boolean(Infinity)); 
+console.log(Boolean(null));
+console.log(Boolean(undefined)); 
+console.log(Boolean({})); // 빈 객체 true
+console.log(Boolean([])); // 빈 배열 true
+
+
+
+// 2.. ! 부정 논리 연산자를 두번 사용하는 방법 (!!)
+
+// ! 연산자를 1번 쓰면 불리언 값으로 변환
+// !! 연산자를 2번 쓰면 그 값을 반전시킨다.
+console.log(!'javascript'); // false
+console.log(!!'javascript'); // true
+
+------------------------------------------------------------------------------
+
+01_comparison-operator
+
+/* 01_비교 연산자 */
+
+/* 
+    동등/일치 비교 연산자
+    동등 비교 (==,!=) 연산자는 먼저 암묵적 타입 변환을 통해 타입을 일치시킨 후 같은 값인지 비교한다.
+    일치 비교(===,!==) 연산자는 타입과 값이 모두 일치하는지 비교한다.
+ */
+
+// 숫자1, 문자 '1', true 비교
+console.log(`1 == 1 : &{1 == '1'}`);
+console.log(`1 == true : &{1 == true}`);
+console.log(`1 === 1 : &{1 === 1}`);
+console.log(`1 === true : &{1 === true}`);
+
+// 숫자 0, 문자 '0', 빈 문자열 '', false 비교
+console.log(`0 == '0' : &{0 == '0'}`);
+console.log(`0 == '' : &{0 == ''}`);
+console.log(`0 == false : &{0 == 'false'}`);
+
+console.log(`0 === '0' : &{0 === '0'}`);
+console.log(`0 === '' : &{0 === ''}`);
+console.log(`0 === false : &{0 === 'false'}`);
+
+//null, undefiend 비교
+console.log(`null == undefined : ${null == undefined}`);
+console.log(`null === undefined : ${null === undefined}`);
+
+// == 값만 일치하는지 비교
+// === 타입/값이 모두 일치하는지 비교
+
+//NaN은 자신과 일치하지 않는 유일한 값이다.
+console.log(`NaN == NaN : &{NaN == NaN}`);
+console.log(`NaN === NaN : &{NaN === NaN}`);
+
+// 빌트인 함수 Number.isNaN()을 사용해서 확인해야 한다.
+console.log(`Number.isNaN(NaN) : &{Number.isNaN(NaN)}`);
+
+/* 비교 연산자를 통해 문자열끼리 비교도 가능하며 유니코드 순으로 비교한다. */
+console.log(`'hello' === 'hello' : &{'hello' === 'hello'}`);
+
+console.log(`'apple`)
+
+
+------------------------------------------------------------------------------
+
+01_short-circuit-evaluation
+
+/* 01_논리 연산자 - 단축 평가 */
+/* ||(OR), &&(AND), !(NOT) */
+
+// OR의 경우 'apple'이 이미 Truthy 값이여서 true 로 평가되고
+// 논리 연산의 결과를 결정한 첫 번째 피연산자 apple을 그대로 반환한다.
+console.log('apple' || 'banana');
+console.log(false || 'banana');
+console.log('apple' || false);
+
+// AND의 경우 좌항, 우항 모두 확인해야 하므로
+// 논리 연산의 결과를 결정한 두 번째 피연산자 banana를 그대로 반환한다.
+console.log('apple' && 'banana');
+console.log(false && 'banana');
+console.log('apple' && false);
+
+var num = 1;
+
+if(num % 2 == 0)
+    console.log('짝수입니다.');
+else 
+    console.log('홀수입니다.');
+
+// 단축 평가를 사용하면 if문을 대체할 수 있다.
+num % 2 == 0 && console.log('짝수입니다.');
+num % 2 == 0 || console.log('홀수입니다.');
+
+------------------------------------------------------------------------------
+
+03_ES11-operator
+
+/* 01_옵셔널 체이닝 연산자 */
+var obj = null;
+var val = obj?.value;
+console.log(val);   // 오류나는 게 싫어서 ?를 붙임
+
+/* 02_null 병합 연산자 */
+var test = null ?? '기본 값';
+console.log(test);
+
+------------------------------------------------------------------------------
