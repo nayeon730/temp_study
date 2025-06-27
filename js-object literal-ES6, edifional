@@ -1,0 +1,78 @@
+
+01_property-vlaue-shorthand
+
+/* 01_프로퍼티 값 단축 구문 */
+var id = 'p-001';
+var price = 30000;
+
+var product = {
+    id : id,
+    price : price
+};
+
+console.log(product);
+
+// ES6에서는 프로퍼티 값으로 변수를 사용하는 경우
+// 변수 이름고 ㅏ프로퍼티 키가 동일한 이름일 때 프로퍼티 키를 생략할 수 있다.
+// 프로퍼티 키는 변수 이름으로 자동 생성된다.
+var product2 = {id, price};
+console.log(product2);
+
+------------------------------------------------------------
+
+02_method-shorthand
+
+/* 02_메서드 단축 */
+
+// ES6에서는 메서드를 정의할 때 function 키워드를 생략한 축약 표현을 사용할 수 있다.
+var dog = {
+    name : '뽀삐',
+    eat(food) {
+            // 내부 프로퍼티 접근할 때 this를 붙여야한다.
+        console.log(`${this.name}(은)는 ${food}를 맛있게 먹어요`);
+    }
+};
+
+dog.eat('고구마');
+
+------------------------------------------------------------
+
+01_in-operator
+
+/* in 연산자 - 프로퍼티 존재 여부 확인하기 */
+
+var student = {
+    name : '유관순',
+    age : 16,
+    test : undefined
+};
+
+console.log(student.name === undefined);
+console.log(student.height === undefined);
+console.log(student.test === undefined);    // true - 존재하지 않음으로 판별되는 문제
+
+console.log("name" in student);
+console.log("height" in student);
+console.log("test" in student);
+
+------------------------------------------------------------
+
+02_for-in
+
+// for in 반복문
+// 객체의 모든 키 순회
+
+var student = {
+    name : '유관순',
+    age : 16,
+    getingo : function() {
+        return `&{this.name}(은)는 &{this.age}세입니다.`;
+    }
+};
+
+for(var key in student) {
+    console.log(`key : ${key}`);
+    console.log(`student[key] : ${student[key]}`);
+}
+
+------------------------------------------------------------
