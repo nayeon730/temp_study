@@ -1,0 +1,96 @@
+
+01_variable
+
+
+/* 암문적 타입 변환 : 엔진에서 암묵적으로 값의 타입 변환 */
+
+// 문자열로 변환 : 숫+문 -> 문+문
+console.log(10 + '20'); // 1020
+
+// 산술 연산자 (숫자로 변한)
+console.log(10 - '5'); // 5
+
+// 비교 연산자 (숫자로 변한)
+console.log(10 > '5'); // true
+
+// +단항 연산자 (숫자로 변한)
+console.log(+'3'); // 3
+
+// 논리 타입으로 변환 (boolean)
+if(undefined) console.log("if(undefined)");
+// 만약 조건이 true라면 console.log("if(undefined)");이걸 실행해라
+// 하지만, undefined=false -> 출력X
+
+
+/* 명시적 타입 변환 : 개발자 의도로 값의 타입 변환 */
+
+// 문자열 타입으로 변환
+// 10이라는 숫자를 문자로 바꿈 -> 변화된 값을 콘솔에 출력
+console.log(String(10)); 
+
+// 숫자 타입으로 변환
+// 10이라는 문자를 숫자로 변환
+console.log(Number('10'));
+
+console.log(+'3');
+
+// 10이라는 문자를 숫자로 변환
+console.log('10' * 1);
+
+// 빈 문자열이 아닌 '고구마'라는 값이 있으므로, truthy
+// Boolean('고구마') -> true
+console.log(Boolean('고구마')); // true
+
+// !는 부정연산자
+// Boolean(값)을 먼저 변환(truty,falsy) -> 값을 반대로 뒤집음 
+// Boolean('고구마')-> true -> false
+console.log(!'고구마'); // false
+
+// !!는 두번 뒤집음
+// Boolean('고구마')-> true -> false -> true
+console.log(!!'고구마');  // true
+
+-----------------------------------------------------------------------------------
+
+02_operator
+
+
+/* 비교 연산자 */
+
+console.log(``)
+
+const name = "고구마";
+const price = 2000;
+
+console.log(`상품명: ${name}, 가격: ${price}원`);
+
+
+const student = "나연";
+const age = 24;
+
+console.log(`이름: ${student}이고, 나이는 ${age}입니다.`)
+
+
+console.log(`2 + 3 = ${2 + 3}`);
+
+// == : 타입은 암묵적 일치시키고, 값은 값인지만 비교
+console.log(`1 =='1' : ${1 == '1'}`); // true
+console.log(`1 == '1' : ${1 == '1'}`); // true
+
+// === : 타입, 값 모두 일치하는지 비교
+console.log(`1 === '1' : ${1 === '1'}`);
+
+
+/* 논리 연산자 */
+// apple은 빈 문자열이 아니므로, truty
+// || : 앞의 값이 truthy면 그 값을 바로 반환
+console.log('apple' || 'banana'); // apple
+// && : 앞의 값이 truthy면 뒤의 값을 반환
+console.log('apple' && 'banana'); // banana
+
+console.log('null'|| 'banana'); // null
+console.log('null'&& 'banana'); // banana
+
+console.log(''|| ''); // 표기 안 됨
+console.log('banana'&& 'null'); // null
+
