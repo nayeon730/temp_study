@@ -1,0 +1,75 @@
+
+/* 1_object */
+
+// student 객체, getinfo 메서드(함수), return 내보내기, console.log() 출력
+var student = {
+    name : '연나',
+    age : 24,
+    getinfo : function(){ // getinfo는 함수 / 객체의 메서드라고 부름
+    return `${this.name}(은)는 ${this.age}세입니다.`;
+    }
+};
+
+console.log(student.getinfo());
+// getinfo() : getinfo를 실행
+
+var animal = {
+    name : 'cat',
+    age : 2,
+    getinfo : function(){
+        return `${this.name}는 ${this.age}살이며, 귀엽습니다.`;
+    }
+};
+
+console.log(animal.getinfo());
+
+
+var fruit = {
+    name : 'orange',
+    sweety : 5,
+    get : function (){
+        return `${this.name}는 ${this.sweety}정도의 당도를 가지고 있습니다.`;
+    }
+};
+
+console.log(fruit.get());
+
+
+/* 2_property */
+
+var student = {
+    name : '연나',
+    age : 24,
+    getinfo : function(){ 
+    return `${this.name}(은)는 ${this.age}세입니다.`;
+    }
+};
+// name, age = 프로퍼티 키
+// '연나', 24 = 프로퍼티 값
+console.log(student.getinfo());
+
+/* 3_method */
+
+var cat = {
+    name : '먼지',
+    eat : function (츄르) {
+        console.log `귀여운 ${this.name}는 ${츄르}를 맛있게 먹어요.`;
+    }
+}
+
+
+
+
+var dog = {
+
+name : '뽀삐',
+eat : 'food',
+getinfo : function(){
+return `${this.name}(은)는 ${this.eat}를 맛있게 먹어요.`;
+
+}
+}
+
+console.log(dog.getinfo());
+
+
