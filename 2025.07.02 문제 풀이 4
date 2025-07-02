@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="drink">
+        <li>커피</li>
+    </ul>
+
+    <script>
+        // 요소 취득
+        const $drink = document.getElementById('drink');
+        // li 생성
+        const $li = document.createElement('li');
+        // li에 텍스트 부여
+        $li.textContent = '콜라';
+        // 만든 li를 drink에 추가
+        $drink.appendChild($li);
+
+        // 사이다
+        const $li2 = document.createElement('li');
+        $li2.textContent = '사이다';
+        $drink.appendChild($li2);
+        
+        // 이동
+        const $coffee = $drink.firstElementChild;
+        const $coke = $coffee.nextElementSibling;
+        $drink.insertBefore($li2, $coke);
+
+        // 교체
+        const $li3 = document.createElement('li')
+        $li3.textContent = '제로콜라';
+        $drink.replaceChild($li3, li2);
+
+    </script>
+</body>
+</html>
