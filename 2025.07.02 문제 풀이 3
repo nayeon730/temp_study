@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>나연_문제</h1>
+
+    <ol id="menu">
+        <li>토마토</li>
+        <li>까르보나라</li>
+        <li>필라프</li>
+    </ol>
+
+    <script>
+    // 요소 취득
+    const $menu = document.getElementById('menu');
+
+    // 요소 노드 생성
+    const $li = document.createElement('li');
+
+    // 텍스트 노드 생성
+    const $textNode = document.createTextNode('리조또');
+
+    $li.appendChild($textNode);
+
+    $menu.appendChild($li);
+
+//------------------
+
+    // 메뉴의 첫째 토마토를 가져온다
+    const $tomato = $menu.firstElementChild
+    // li를 새로 생성
+    const $newChild = document.createElement('li');
+    
+    // 로제라는 텍스트를 추가
+    $newChild.textContent = '로제';
+
+    // 토마토 대신 로제로 교체
+    $menu.replaceChild($newChild, $tomato);
+    </script>
+</body>
+</html>
