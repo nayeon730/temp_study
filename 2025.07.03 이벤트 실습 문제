@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <h1>사용자 입력 양식 이벤트 연습하기</h1>
+    <br>
+    <label for="username">이름</label><br>
+    <input type="text" name="username" id="username" placeholder="이름을 입력하세요." required>
+
+    <br><br>
+
+    <label for="email">이메일</label><br>
+    <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+
+    <br><br>   
+    <!-- input의 id = label의 for를 일치시켜, 라벨을 눌러도 라디오가 체크되도록 함. -->
+    <label>성별<br></label>
+        
+    <input type="radio" name="gender" id="male" value="m" checked required>
+    <label for="male">남자</label>
+    <input type="radio" name="gender" id="female" value="f">
+    <label for="female">여자</label>
+
+    <br><br>
+
+    <label>참여 일자 선택</label><br>
+    <select name="date" id="date" required>
+        <!-- 날짜선택 option에 valeue=""로 입력해야만 select의 required가 실행됨. -->
+        <option value="" selected>-- 날짜 선택 --</option>
+        <option value="2025.07.04">2025.07.04.FRI</option>
+        <option value="2025.07.05">2025.07.05.SAT</option>
+        <option value="2025.07.06">2025.07.06.SUN</option>
+    </select>
+
+    <br><br>
+
+    <label>요청 사항</label><br>
+    <textarea name="etc" id="etc" rows="7" cols="50" style="resize: none;"
+    placeholder="요청사항을 입력하세요." maxlength="500"></textarea><br>
+    <!-- <input type="text" name="etc" id="etc" value="etc"> -->
+    <span>0</span>/5000자
+
+    <br><br>
+
+    <!-- label 안에 input과 텍스트를 넣어, 텍스트를 눌러도 체크되게 함. -->
+    <label>
+        <input type="checkbox" required>
+        <b>개인정보 수집에 동의합니다.</b>
+    </label>    
+
+    <br><br>
+
+    <input type="submit" value="신청하기" style="width: 80px; height: 40px; background-color: dodgerblue; color: white; border: 0px;">
+    </form>
+
+
+    <script>
+    // input-submit의 노드 취득
+    const $btn = document.querySelector('input[type=submit]')
+
+    // 마우스오버) $btn(input-submit)의 마지막자식으로 뒤를 추가
+    $btn.onmouseover = (e) => {
+        $btn.insertAdjacentHTML('beforeend', 'mouseover button=' + e.button + "<br>")
+    }
+    
+    $btn.addEventListener('mouseover', () => {
+        $btn.style.backgroundColor = 'darkblue';
+    });
+
+    // 마우스아웃)
+    $btn.onmouseout = (e) => {
+        $btn.insertadjacentHTML('beforeend', 'mouseout button=' + e.button + "<br>")
+    }
+
+    $btn.addEventListener('mouseout', () => {
+        $btn.style.backgroundColor = 'dodgerblue';
+    })
+    </script>
+</body>
+</html>
