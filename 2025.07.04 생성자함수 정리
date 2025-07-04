@@ -1,0 +1,36 @@
+
+/* object constructor function */
+
+// 객체 생성자 함수
+const food = new Object();
+                    // 객체 대문자
+food.name = '비빔밥',
+food.price = 8000
+
+console.log(food);
+
+// 객체 리터럴을 이용한 객체 생성 방식
+const food1 = {
+    name : '김치볶음밥',
+    price : 7000,
+    getinfo : function() {
+        return `오늘 점심은 ${this.price}원짜리 ${this.name}을 먹었어!`
+    }
+};
+
+
+// 생성자 함수
+function Food(name, price) {
+    this.name = name;
+    this.price = price;
+    this.getinfo = function() {
+        return `이 맛있어보이는 ${this.name}(은)는 ${this.price}원입니다.`;
+    }
+};
+
+const food2 = new Food('제육덮밥', 10000);
+const food3 = new Food('돈까스', 9000);
+
+console.log(food2.getinfo());
+console.log(food3.getinfo());
+
