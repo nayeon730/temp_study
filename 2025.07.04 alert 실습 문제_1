@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<h3>input 태그에 숫자를 입력하고 버튼을 클릭하면, +10이 된 값을 alert으로 출력해 주세요.</h3>
+<pre>(input 값 : 5 -> alert으로 출력된 값 : 15)</pre>
+
+<input id="num" type="number" name="num">
+<button id="btn1">클릭</button>
+
+<script>
+document.getElementById('btn1').onclick = () => {
+// input(중에서 name="num"인 것)의 value를 가져올게
+
+const inputValue = document.getElementById('num').value
+// 위와 동일) const inputValue = document.querySelector('input[name="num"]').value
+
+
+// Number() : 문자열 -> 숫자열로 반환
+// result 라는 거에 뒤에 값을 넣어줄거야
+// inputValue(input 값은 항상 문자열)을 숫자로 바꿔주고, 10을 더해줄거야
+const result = Number(inputValue) + 10;
+
+alert(result);
+}
+
+</script>
+
+</body>
+</html>
