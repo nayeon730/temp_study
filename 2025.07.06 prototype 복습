@@ -1,0 +1,100 @@
+
+/* 프로토타입 (상속) */
+
+const user = {
+    activate : true,
+    login : function() {
+        console.log('로그인되었습니다.');
+    }
+};
+
+const student = {
+    passion : true
+};
+
+student.__proto__ = user;   // student의 부모는 user이다.
+console.log(student.activate);  // true
+student.login();    // 로그인되었습니다.
+
+
+const greedyStudent = {
+    class : 11,
+    __proto__ : student
+}
+
+console.log(greedyStudent.activate);
+console.log(greedyStudent.passion);
+
+
+// 프로토타입 feacher
+
+const user2 = {
+    id : 'user',
+    login : function () {
+        console.log(`${this.id}님이 로그인되어습니다.`);
+    }
+};
+
+const student2 = {
+    __proto__ : user2
+};
+
+student2.id = 'user02';
+student2.login;
+
+// prop : 어떤 걸 가지고 있는지 확인하는 반복문
+for(let prop in student2) {
+    console.log(prop);
+
+// hasOwnProperty : 자기 자신의 메서드를 가지고 있는지 확인 (본인소유인지, 상속인지)
+    let isOwn = student2.hasOwnProperty(prop);
+
+    if(isOwn) {
+        console.log(`객체 자신의 프로퍼티 : ${prop}`);
+    } else {
+        console.log(`상속 프로퍼티 : ${prop}`);
+    }
+}
+
+
+// prop : 어떤 걸 가지고 있는지 확인하는 반복문
+// isOwn : 객체 자신의 프로퍼티
+// hasOwnProperty : 자기 자신의 메서드를 가지고 있는지 확인
+
+
+// again)
+
+const user3 = {
+id : 'user03',
+login : function () {
+console.log(`${this.id}님이 로그인되었습니다.`)
+}
+};
+
+const student3 = {
+__proto__ : user3
+};
+
+student3.id = 'user03';
+student3.login;
+
+
+// 생성자함수 프로토타입
+
+const user4 = {
+    activate :  true,
+    login : function() {
+        // console.log('로그인되었습니다.')
+        return('로그인되었습니다.')
+    }
+};
+
+function Student(name) {
+    this.name = name;
+}
+
+Student.prototype = user4;
+
+const student4 = new Student("홍길동");
+console.log(student4.activate);
+console.log(student4.login());
